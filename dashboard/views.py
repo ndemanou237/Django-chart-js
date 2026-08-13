@@ -6,7 +6,7 @@ def dashboard(request):
 
     # premier graphique en ligne chart
     line_labels = [s.mois for s in stats]
-    line_data = [s.visiteur for s in stats]
+    line_data = [s.visiteurs for s in stats]
 
     # deuxieme graphique en bar
     bar_labels = [s.mois for s in stats]
@@ -30,7 +30,7 @@ def dashboard(request):
     context = {
         'line_labels': line_labels,
         'line_data': line_data,
-        'bar_lables': bar_labels,
+        'bar_labels': bar_labels,
         'bar_data': bar_data,
         'radar_labels': radar_labels,
         'radar_data': radar_data,
